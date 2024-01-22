@@ -14,7 +14,7 @@ const jsonParser = bodyParser.json();
 
 //cors
 routes.use(cors());
-const uri = process.env.MONGODB_URI;
+const uri =process.env.MONGODB_URI;
 
 
 // mongoDB client
