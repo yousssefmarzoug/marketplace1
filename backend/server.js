@@ -14,11 +14,12 @@ const jsonParser = bodyParser.json();
 
 //cors
 routes.use(cors());
+const uri = process.env.MONGODB_URI;
+
 
 // mongoDB client
 const MongoClient = require("mongodb").MongoClient;
-const uri =
-  "mongodb+srv://youssefmarzoug:19041@cluster0.7rbusfz.mongodb.net/?retryWrites=true&w=majority";
+
 const client = new MongoClient(uri, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
